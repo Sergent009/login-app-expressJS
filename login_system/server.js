@@ -37,5 +37,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`app is listening on the port http://localhotst:${port}`)
+    console.log(`app is listening on the port http://localhost:${port}`)
 })
