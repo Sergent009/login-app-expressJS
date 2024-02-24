@@ -19,11 +19,24 @@ router.post('/login', (req, res) => {
 // route for dashboard
 router.get('/dashboard', (req, res) => {
     if(req.session.user){
-        res.render('dashboard', {user: req.session.user})
+        res.render('../login_system/views/dashboard', {user: req.session.user})
     }
     else{
         res.send('Unauthorized User')
     }
+})
+
+// route for logout
+router.get('/logout', (req, res) => {
+    req.session.destroy(function(err){
+        if(err){
+            console.log(err)
+            res.send('Error')
+        }
+        else{
+            res.render('../login_system/views/base', {title: 'Express', logout: 'Logout Successfuly..!'})
+        }
+    })
 })
 
 module.exports = router

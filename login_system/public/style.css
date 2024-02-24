@@ -38,3 +38,17 @@ body::before {
     font-weight: 800;
     color: white;
 }
+
+.alter{
+    background: greenyellow;
+    color: black;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.welcome{
+    width: 500px;
+    font-weight: bolder;
+    border-radius: 4px;
+}
